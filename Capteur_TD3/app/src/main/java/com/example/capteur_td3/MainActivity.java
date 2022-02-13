@@ -34,10 +34,15 @@ public class MainActivity extends Activity implements SensorEventListener{
 
     @Override
     public void onSensorChanged(SensorEvent event) {
-        float x = event.values[0];
-        float y = event.values[1];
-        float z = event.values[2];
-        convertColor(x,y,z);
+        if(accelerometer != null){
+            float x = event.values[0];
+            float y = event.values[1];
+            float z = event.values[2];
+            convertColor(x,y,z);
+        } else {
+            t.setText("No accelerometer detected");
+        }
+
     }
 
     @Override
