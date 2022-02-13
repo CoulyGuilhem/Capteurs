@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "Capteur_TP6"
+rootProject.name = "Capteur_TD7"
 include ':app'
